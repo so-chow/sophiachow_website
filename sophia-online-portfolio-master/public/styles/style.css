@@ -1,0 +1,622 @@
+body{
+  margin: 0 auto;
+  font-size: 62.5%;
+  height: 850px;
+}
+
+h2{
+  font-family: 'Lato', sans-serif;
+  font-size:2em;
+  text-transform: uppercase;
+  padding: 1.5em;
+}
+
+p{
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5em;
+  padding:0.5em 5em;
+}
+
+/**nav**/
+header{
+ position: fixed;
+ width: 100%;
+ text-align: center;
+ z-index: 2;
+}
+
+ul{
+  display:flex;
+  flex-direction: row;
+  margin:0;
+  padding:0;
+  justify-content: center;
+  background-color: #F7FFFF;
+}
+
+.nav-links{
+  text-transform: uppercase;
+  list-style-type: none;
+  padding: 3em;
+}
+
+.home-logo{
+  list-style-type: none;
+  padding: 2em;
+}
+.nav-links a{
+  text-decoration: none;
+  font-family: 'Lato', sans-serif;
+  color: #000;
+  font-size:1.3em;
+}
+
+.home-logo a{
+  font-family: 'Pacifico', cursive;
+  text-decoration: none;
+  color: #000;
+  font-size:2em;
+}
+
+header nav ul li a:hover{
+  border-bottom: 1px solid #000;
+}
+
+/**image slider**/
+.slideshow{
+  padding-top:80px;
+}
+
+#slider_container{
+  background-size:cover;
+  overflow:hidden;
+  text-align: center;
+  position:relative;
+  display:inline-block;
+}
+
+.slide {
+  top:0;
+  width:100%;
+  display:inline-block;
+}
+
+.slide img {
+  width:100%;
+  height:100%;
+  border-radius:6px;
+  border:1px solid white;
+}
+
+.slide_buttons{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.arrow{
+  font-size:3em;
+}
+
+.circle_container{
+  margin:0 30px;
+  display:flex;
+  justify-content: center;
+}
+
+.circle {
+  background: white;
+  border: 1px solid black;
+  border-radius: 50%;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  margin: .1em;
+}
+
+.active-white{
+  background:#fff0f1;
+}
+
+.arrow:hover{
+  color:#0fa5a5;
+}
+
+/**about me**/
+.about_me{
+  background-color: #f0fffe;
+  position: relative;
+  text-align: center;
+  height: 550px;
+  overflow: hidden;
+}
+
+.about_me_text{
+  position:absolute;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding:0 15em;
+}
+
+.line-image-of-me1{
+  position: absolute;
+  background-position: left;
+  background-repeat: repeat;
+  left: 1%;
+  top: 20%;
+}
+
+.line-image-of-me2{
+  position: absolute;
+  background-position: right;
+  background-repeat: repeat;
+  right: 1%;
+  bottom: 20%;
+}
+
+.read_more_btn a {
+  text-decoration: none;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5em;
+  border: 1px #b2b2b2 solid;
+  color: #0fa5a5;
+  font-weight: bold;
+  padding: 1.5em 5em;
+  display: inline-block;
+}
+
+.read_more_btn a:hover{
+  display: inline-block;
+  background-color: #0fa5a5;
+  color: #FFF;
+  border: 1px #FFF solid;
+}
+
+.read_more_btn a:focus{
+  outline:0;
+}
+
+/**Quick Links**/
+.projects_section{
+  text-align: center;
+}
+
+.projects_container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom:3em;
+}
+
+.projects{
+  background-color:#f2f3f3;
+  display:flex;
+  flex-direction: column;
+  width:35em;
+  height:20em;
+  margin:1em;
+  box-shadow: 6px 7px 3px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+.projects a{
+  text-decoration: none;
+  color:#000;
+  width: inherit;
+  height:inherit;
+}
+
+.submit:active {
+  box-shadow: 0px 0px #717a33;
+  top: 4px;
+}
+
+.projects h3{
+  font-family: 'Lato', sans-serif;
+  font-size: 2em;
+}
+
+.project_img{
+  visibility: hidden;
+  height:inherit;
+  width:inherit;
+}
+
+.projects:hover{
+  background-color: #A9A9A9;
+}
+
+.project1:hover .project_img{
+  visibility: visible;
+}
+
+.project1:hover .project_text{
+  display:none;
+}
+
+/**skils**/
+/**
+.skills_section{
+  text-align: center;
+  background-color: #f7f7ff;
+}
+
+.skills_section h2{
+  padding-top:2.5em;
+}
+
+.skills_container{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom:8em;
+}
+
+.skill{
+  position: relative;
+  border-radius:50%;
+  background-color:#FFF;
+  color:#000;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5em;
+  padding:2em;
+  margin:5em;
+  width:2em;
+  height:2em;
+}
+
+.percentage-overlay{
+  position:absolute;
+  border-radius:50%;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  height:100%;
+  width:100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(255,255,255, 1);
+}
+
+.skill:hover .percentage-overlay{
+  opacity:2;
+}
+
+.pecentage{
+  color:navy;
+  font-size:2em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align:center;
+}
+
+.arc{
+  overflow:hidden;
+  position:absolute;
+  top: -.5em;
+  right:50%;
+  bottom:50%;
+  left:-.5em;
+  transform-origin: 100% 100%;
+  transform:rotate(90deg) skewX(-1deg);
+}
+
+.arc:before{
+  box-sizing: border-box;
+  display:block;
+  border:solid .3em navy;
+  width:200%;
+  height:200%;
+  border-radius: 50%;
+  transform:skewX(1deg);
+  content:'';
+}
+
+.arc2{
+  overflow:hidden;
+  position:absolute;
+  top: -.5em;
+  right:50%;
+  bottom:50%;
+  left:-.5em;
+  transform-origin: 100% 100%;
+  transform:rotate(180deg) skewX(-1deg);
+}
+
+.arc2:before{
+  box-sizing: border-box;
+  display:block;
+  border:solid .3em navy;
+  width:200%;
+  height:200%;
+  border-radius: 50%;
+  transform:skewX(1deg);
+  content:'';
+}
+
+.arc3{
+  overflow:hidden;
+  position:absolute;
+  top: -.5em;
+  right:50%;
+  bottom:50%;
+  left:-.5em;
+  transform-origin: 100% 100%;
+  transform:rotate(270deg) skewX(-1deg);
+}
+
+.arc3:before{
+  box-sizing: border-box;
+  display:block;
+  border:solid .3em navy;
+  width:200%;
+  height:200%;
+  border-radius: 50%;
+  transform:skewX(1deg);
+  content:'';
+}
+**/
+/**contact**/
+.contact_container{
+  text-align: center;
+  padding-bottom: 12em;
+}
+
+.contact_info{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.contact{
+  display:flex;
+  flex-direction: column;
+  font-family: 'Lato', sans-serif;
+  justify-content: center;
+}
+
+.contact_info h3{
+  font-family: 'Lato', sans-serif;
+  font-size: 2em;
+  font-style: italic;
+  color:#dde0e0;
+  text-transform: uppercase;
+}
+
+.contact p{
+  margin:0;
+  padding: 1em;
+}
+
+.icon_container{
+  display:flex;
+  flex-direction: row;
+}
+
+.my_info_btn a{
+  text-decoration: none;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5em;
+  border: 1px #b2b2b2 solid;
+  color: #0fa5a5;
+  font-weight: bold;
+  padding: 0.5em 2em;
+  display: inline-block;
+  margin: 1em;
+}
+
+.my_info_btn a:hover {
+  display: inline-block;
+  background-color: #0fa5a5;
+  color: #FFF;
+  border: 1px #FFF solid;
+}
+
+.follow_me{
+  justify-content: space-around;
+  padding-right: 7em;
+}
+
+.follow_me a{
+  padding:1em;
+}
+
+.GA{
+  height: 20px;
+  max-width: 25px;
+}
+
+/**icon hover effects**/
+.icon_container button{
+  width:1em;
+  height:1em;
+}
+
+.icon_container button:focus{
+  outline:0;
+}
+
+.linkedin{
+  background: url('../images/linkedin-letters.png');
+  height: 100%;
+  width: 100%;
+  padding:1em;
+  border: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.linkedin:hover{
+  background: url(../images/linkedin.png);
+  height: 100%;
+  width: 100%;
+  padding:1em;
+  border: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.github{
+  background: url('../images/github-logo.png');
+  height: 100%;
+  width: 100%;
+  padding:1em;
+  border: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.github:hover{
+  background: url(../images/github.png);
+  height: 100%;
+  width: 100%;
+  padding:1em;
+  border: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.medium{
+  background: url('../images/icons8-medium-filled-50.png');
+  height: 100%;
+  width: 100%;
+  padding:1em;
+  border: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.medium:hover{
+  background: url(../images/medium.png);
+  height: 100%;
+  width: 100%;
+  padding:1em;
+  border: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.insta{
+  background: url('../images/insta.png');
+  height: 100%;
+  width: 100%;
+  padding:1em;
+  border: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.insta:hover{
+  background: url(../images/insta.png);
+  height: 100%;
+  width: 100%;
+  padding:1em;
+  border: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/**footer**/
+.footer{
+  font-family: 'Lato', sans-serif;
+  font-size: 0.5em;
+  color:#000;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin:1em;
+}
+
+.footer a{
+  text-decoration: none;
+  color: #000;
+}
+
+.heart{
+  color: pink;
+  display:inline-block;
+}
+
+.web_credit{
+  padding-right: 1em;
+}
+
+.icon_credit{
+    padding-top: .2em;
+}
+
+/* Portrait and Landscape */
+@media
+  screen
+  and (device-width: 360px)
+  and (device-height: 640px)
+  and (-webkit-device-pixel-ratio: 3)
+  and (orientation: portrait),
+  only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (-webkit-min-device-pixel-ratio: 2),
+  only screen
+  and (min-device-width: 834px)
+  and (max-device-width: 1112px)
+  and (-webkit-min-device-pixel-ratio: 2),
+  only screen
+  and (min-device-width: 1024px)
+  and (max-device-width: 1366px)
+  and (-webkit-min-device-pixel-ratio: 2){
+  .nav-links a{
+    font-size:2em;
+  }
+  .home-logo{
+    font-size: 1.5em;
+    padding:1em;
+  }
+  .projects{
+    width:80em;
+  }
+  p{
+    font-size:2.5em;
+    padding:0 1.5em;
+  }
+  h2{
+    font-size:3.5em;
+    padding:.5em;
+  }
+  .about_me{
+    height:700px;
+  }
+  .about_me_text{
+    padding:.2em;
+  }
+  .projects h3, .contact_info h3{
+    font-size:3em;
+  }
+  .read_more_btn a, .my_info_btn a{
+    font-size: 2.5em;
+  }
+  .skill{
+    font-size:3em;
+    margin:3em;
+    width: 5em;
+    height: 5em;
+  }
+  .icon_container button {
+    width: 4em;
+    height: 4em;
+  }
+}
+
+
+/* Large devices (large desktops, 1200px and up) */
+/*@media (min-width: 1200px) {
+ }*/
